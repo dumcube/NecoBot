@@ -1,0 +1,10 @@
+node_modules/
+dist/
+build/
+.cache/
+.next/
+venv/
+__pycache__/
+*.log
+*.tmp
+*.swp
