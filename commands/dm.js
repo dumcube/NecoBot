@@ -1,4 +1,3 @@
-// dmCommand.js
 const { SlashCommandBuilder } = require('discord.js');
 
 const OWNER_ID = '540438259436748811';
@@ -6,7 +5,7 @@ const OWNER_ID = '540438259436748811';
 module.exports = {
   data: new SlashCommandBuilder()
     .setName('dm')
-    .setDescription('send direct message (DUM only)')
+    .setDescription('(DUM ONLY) send direct message')
     .addUserOption(option =>
       option.setName('user')
         .setDescription('target')

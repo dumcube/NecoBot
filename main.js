@@ -5,6 +5,9 @@ const charles = require('./commands/charles.js');
 const puffice = require('./commands/puffice.js');
 const quote = require('./commands/quote.js');
 
+const stats = require('./stats.js');
+
+
 require('dotenv').config();
 
 // === SETUP ===
@@ -24,7 +27,8 @@ const commands = [
   puffice.data,
   quote.data,
   dmCommand.data,
-  charles.data
+  charles.data,
+  stats.data,
 ];
 
 // === REGISTER COMMANDS ===
@@ -62,6 +66,10 @@ client.on(Events.InteractionCreate, async (interaction) => {
 
   if (interaction.commandName === 'charles') {
     await charles.execute(interaction);
+  }
+
+  if (interaction.commandName === 'stats') {
+    await stats.execute(interaction);
   }
 });
 
